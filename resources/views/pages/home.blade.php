@@ -4,7 +4,7 @@
 
 
 
-    @guest
+    @guest  <!-- Lo vede achi ancora non si è loggato -->
     
     <hr class="border-white">
 
