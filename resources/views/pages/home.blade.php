@@ -1,19 +1,27 @@
 @extends('layouts.main')
 
 @section('content')
+
+<hr class="border-white">
+
+
     <h1>Register</h1>
 
-    <form>
+    <form action="{{route('register')}}" method="POST">
 
-    <label for="name">Name</label>
-    <input type="text" name="name"><br>
-    <label for="email">Email</label>
-    <input type="text" name="email"><br>
-    <label for="password">Password</label>
-    <input type="password" name="password"><br>
-    <label for="password_confirmation">Password Confirmed</label>
-    <input type="password" name="password_confirmation"><br>
-    <input type="submit" value="Register">
+
+    @method('POST')
+    @csrf
+
+        <label for="name">Name</label>
+        <input type="text" name="name"><br>
+        <label for="email">Email</label>
+        <input type="text" name="email"><br>
+        <label for="password">Password</label>
+        <input type="password" name="password"><br>
+        <label for="password_confirmation">Password Confirmed</label>
+        <input type="password" name="password_confirmation"><br>
+        <input type="submit" value="Register">
     
     </form>
 
@@ -30,7 +38,9 @@
         <input type="password" name="password"><br>
         <input type="submit" value="Login">
         
-        </form>
+    </form>
+
+    <hr class="border-white">
 
 
 @endsection
