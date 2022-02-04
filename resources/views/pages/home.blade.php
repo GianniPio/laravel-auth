@@ -29,7 +29,10 @@
 
     <h1>Login</h1>
 
-    <form>
+    <form action="{{route('login')}}" method="POST">
+
+        @method('POST')
+        @csrf
 
         
         <label for="email">Email</label>
