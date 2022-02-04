@@ -2,8 +2,11 @@
 
 @section('content')
 
-<hr class="border-white">
 
+
+    @guest
+    
+    <hr class="border-white">
 
     <h1>Register</h1>
 
@@ -42,8 +45,12 @@
         <input type="submit" value="Login">
         
     </form>
-
+    
     <hr class="border-white">
+    @endguest
+    
+
+    
 
 
 @endsection
